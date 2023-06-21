@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9+b4FAXgnyY0/KxX32bAdxV5D6b4zD+htfLo9G25a3Id3hKjydxI5mPaLwLX78bw1IKwwQ3qbQ91JUCsMqvGKg==",
+  "success": true,
+  "projectFilePath": "E:\\ProgrammingObjectOriented\\src\\SampleHierarchies.Services\\SampleHierarchies.Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DIO\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

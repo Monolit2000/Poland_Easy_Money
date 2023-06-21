@@ -1,0 +1,12 @@
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Helpers\bin\Debug\net6.0\SampleHierarchies.Helpers.deps.json
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Helpers\bin\Debug\net6.0\SampleHierarchies.Helpers.dll
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Helpers\bin\Debug\net6.0\SampleHierarchies.Helpers.pdb
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Helpers\obj\Debug\net6.0\SampleHierarchies.Helpers.csproj.AssemblyReference.cache
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Helpers\obj\Debug\net6.0\SampleHierarchies.Helpers.GeneratedMSBuildEditorConfig.editorconfig
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Helpers\obj\Debug\net6.0\SampleHierarchies.Helpers.AssemblyInfoInputs.cache
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Helpers\obj\Debug\net6.0\SampleHierarchies.Helpers.AssemblyInfo.cs
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Helpers\obj\Debug\net6.0\SampleHierarchies.Helpers.csproj.CoreCompileInputs.cache
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Helpers\obj\Debug\net6.0\SampleHierarchies.Helpers.dll
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Helpers\obj\Debug\net6.0\refint\SampleHierarchies.Helpers.dll
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Helpers\obj\Debug\net6.0\SampleHierarchies.Helpers.pdb
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Helpers\obj\Debug\net6.0\ref\SampleHierarchies.Helpers.dll

@@ -1,0 +1,12 @@
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Enums\bin\Debug\net6.0\SampleHierarchies.Enums.deps.json
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Enums\bin\Debug\net6.0\SampleHierarchies.Enums.dll
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Enums\bin\Debug\net6.0\SampleHierarchies.Enums.pdb
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Enums\obj\Debug\net6.0\SampleHierarchies.Enums.csproj.AssemblyReference.cache
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Enums\obj\Debug\net6.0\SampleHierarchies.Enums.GeneratedMSBuildEditorConfig.editorconfig
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Enums\obj\Debug\net6.0\SampleHierarchies.Enums.AssemblyInfoInputs.cache
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Enums\obj\Debug\net6.0\SampleHierarchies.Enums.AssemblyInfo.cs
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Enums\obj\Debug\net6.0\SampleHierarchies.Enums.csproj.CoreCompileInputs.cache
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Enums\obj\Debug\net6.0\SampleHierarchies.Enums.dll
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Enums\obj\Debug\net6.0\refint\SampleHierarchies.Enums.dll
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Enums\obj\Debug\net6.0\SampleHierarchies.Enums.pdb
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Enums\obj\Debug\net6.0\ref\SampleHierarchies.Enums.dll

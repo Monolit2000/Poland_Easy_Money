@@ -1,0 +1,17 @@
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Data\bin\Debug\net6.0\SampleHierarchies.Data.deps.json
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Data\bin\Debug\net6.0\SampleHierarchies.Data.dll
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Data\bin\Debug\net6.0\SampleHierarchies.Data.pdb
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Data\bin\Debug\net6.0\SampleHierarchies.Enums.dll
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Data\bin\Debug\net6.0\SampleHierarchies.Interfaces.dll
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Data\bin\Debug\net6.0\SampleHierarchies.Interfaces.pdb
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Data\bin\Debug\net6.0\SampleHierarchies.Enums.pdb
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Data\obj\Debug\net6.0\SampleHierarchies.Data.csproj.AssemblyReference.cache
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Data\obj\Debug\net6.0\SampleHierarchies.Data.GeneratedMSBuildEditorConfig.editorconfig
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Data\obj\Debug\net6.0\SampleHierarchies.Data.AssemblyInfoInputs.cache
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Data\obj\Debug\net6.0\SampleHierarchies.Data.AssemblyInfo.cs
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Data\obj\Debug\net6.0\SampleHierarchies.Data.csproj.CoreCompileInputs.cache
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Data\obj\Debug\net6.0\SampleHierarchies.Data.csproj.CopyComplete
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Data\obj\Debug\net6.0\SampleHierarchies.Data.dll
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Data\obj\Debug\net6.0\refint\SampleHierarchies.Data.dll
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Data\obj\Debug\net6.0\SampleHierarchies.Data.pdb
+E:\ProgrammingObjectOriented\src\SampleHierarchies.Data\obj\Debug\net6.0\ref\SampleHierarchies.Data.dll
