@@ -14,6 +14,10 @@ public interface IDataService
     /// </summary>
     IAnimals? Animals { get; set; }
 
+    ISettings settings { get; set; }
+
+    IChoiceHistory choiceHistory { get; set; }
+
     /// <summary>
     /// Reads animals from a json path.
     /// </summary>
@@ -27,6 +31,9 @@ public interface IDataService
     /// <param name="jsonPath"></param>
     /// <returns>True if success, false otherwise</returns>
     bool Write(string jsonPath);
+
+    //ISettings Settings { get; set; }
+
 
     #endregion // Interface Members
 }

@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SampleHierarchies.Data;
 using SampleHierarchies.Interfaces.Data;
 using SampleHierarchies.Interfaces.Services;
 using System.Diagnostics;
@@ -12,33 +13,48 @@ public class SettingsService : ISettingsService
 {
     #region ISettings Implementation
 
+    public IDataService _dataService;
+
+    // public ISettings Settings { get; set;  }
+
+
+    public SettingsService(IDataService dataService)
+    {
+        _dataService = dataService;
+    }
+
+
+
+
     /// <inheritdoc/>
     public ISettings? Read(string jsonPath)
     {
-        //    ISettings? result;
+        //ISettings? Settings;
 
-        //    try
-        //    {
-        //        string jsonContent = File.ReadAllText(jsonPath);
-        //        var jsonSettings = new JsonSerializerSettings()
-        //        {
-        //            TypeNameHandling = TypeNameHandling.Objects
-        //        };
-        //        result = JsonConvert.DeserializeObject<Animals>(jsonContent, jsonSettings);
-        //        if (Animals is null)
-        //        {
-        //            result = false;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Debug.WriteLine(ex);
-        //        result = false;
-        //    }
+        try
+        {
+            string jsonContent = File.ReadAllText(jsonPath);
+            var jsonSettings = new JsonSerializerSettings()
+            {
+                TypeNameHandling = TypeNameHandling.Objects
+            };
+            Settings settings = JsonConvert.DeserializeObject<Settings>(jsonContent, jsonSettings);
 
-        ISettings? result = null;
-        return result;
+           _dataService.settings = settings;
 
+            //Console.WriteLine(_dataService.settings.OrungutanScreenColor);
+
+
+            return settings;
+
+
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine(ex);
+        }
+
+        return new Settings();
     }
 
 
@@ -52,6 +68,8 @@ public class SettingsService : ISettingsService
             string jsonContent = JsonConvert.SerializeObject(settings);
             string jsonContentFormatted = jsonContent.FormatJson();
             File.WriteAllText(jsonPath, jsonContentFormatted);
+
+            Read(jsonPath);
         }
         catch (Exception ex)
         {
@@ -60,4 +78,18 @@ public class SettingsService : ISettingsService
     }
 
     #endregion // ISettings Implementation
+
+    //public SettingsService()
+    //{
+    //    Settings = new Settings();
+    //}
+
+
+
+    public void SetttingColor()
+    {
+
+    }
+
+
 }

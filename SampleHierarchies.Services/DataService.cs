@@ -15,6 +15,9 @@ public class DataService : IDataService
 
     /// <inheritdoc/>
     public IAnimals? Animals { get; set; }
+    public ISettings settings { get; set; }
+
+    public IChoiceHistory choiceHistory { get; set; }
 
     /// <inheritdoc/>
     public bool Read(string jsonPath)
@@ -74,6 +77,10 @@ public class DataService : IDataService
     public DataService()
     {
         Animals = new Animals();
+
+        settings = new Settings();
+
+        choiceHistory = new ChoiceHistory();
     }
 
     #endregion // Ctors

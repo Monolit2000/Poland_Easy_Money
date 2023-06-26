@@ -2,7 +2,9 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PeanutButter.TinyEventAggregator;
+using SampleHierarchies.Data;
 using SampleHierarchies.Gui;
+using SampleHierarchies.Interfaces.Data;
 using SampleHierarchies.Interfaces.Services;
 using SampleHierarchies.Services;
 
@@ -45,7 +47,7 @@ internal static class Program
     static IHostBuilder CreateHostBuilder()
     {
         return Host.CreateDefaultBuilder()
-            .ConfigureServices((context, services) => 
+            .ConfigureServices((context, services) =>
             {
                 services.AddSingleton<ISettingsService, SettingsService>();
                 services.AddSingleton<IEventAggregator, EventAggregator>();
@@ -55,6 +57,8 @@ internal static class Program
                 services.AddSingleton<OrangutanScreen, OrangutanScreen>();
                 services.AddSingleton<AnimalsScreen, AnimalsScreen>();
                 services.AddSingleton<MammalsScreen, MammalsScreen>();
+                services.AddSingleton<CreatSettingsScreen, CreatSettingsScreen>();
+                services.AddSingleton<ISettings, Settings>();
             });
     }
 

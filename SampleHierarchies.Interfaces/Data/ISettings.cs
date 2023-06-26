@@ -25,13 +25,17 @@ public interface ISettings
     /// <summary>
     /// the color of the Mammal Species
     /// </summary>
-    string MammalSpecies { get; set; }
+    string MammalSpeciesColor { get; set; }
 
     /// <summary>
     /// the color of the Dogs Screen
     /// </summary>
     string DogsScreenColor { get; set; }
 
+    /// <summary>
+    /// the color of the Orungutan Screen
+    /// </summary>
+    string OrungutanScreenColor { get; set; }
 
     #endregion // Interface Members
 }

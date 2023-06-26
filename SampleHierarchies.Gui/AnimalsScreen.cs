@@ -20,14 +20,16 @@ public sealed class AnimalsScreen : Screen
     /// </summary>
     private MammalsScreen _mammalsScreen;
 
+
     /// <summary>
     /// Ctor.
     /// </summary>
     /// <param name="dataService">Data service reference</param>
     /// <param name="animalsScreen">Animals screen</param>
     public AnimalsScreen(
+        DogsScreen dogsScreen,
         IDataService dataService,
-        MammalsScreen mammalsScreen)
+        MammalsScreen mammalsScreen) : base(dataService)
     {
         _dataService = dataService;
         _mammalsScreen = mammalsScreen;
@@ -42,50 +44,59 @@ public sealed class AnimalsScreen : Screen
     {
         while (true)
         {
+
+
+            var list = new List<ScreenLineEntry>
+            {
+                new ScreenLineEntry { Text = "0. Exit" },
+                new ScreenLineEntry { Text = "1. Mammals" },
+                new ScreenLineEntry { Text = "2. Save to file" },
+                new ScreenLineEntry { Text = "3. Read from file" }
+            };
             Console.WriteLine();
-            Console.WriteLine("Your available choices are:");
-            Console.WriteLine("0. Exit");
-            Console.WriteLine("1. Mammals");
-            Console.WriteLine("2. Save to file");
-            Console.WriteLine("3. Read from file");
-            Console.Write("Please enter your choice: ");
 
-            string? choiceAsString = Console.ReadLine();
 
-            // Validate choice
-            try
-            {
-                if (choiceAsString is null)
-                {
-                    throw new ArgumentNullException(nameof(choiceAsString));
-                }
+            ScreenRender(list, _dataService.settings.MammalSpeciesColor);
 
-                AnimalsScreenChoices choice = (AnimalsScreenChoices)Int32.Parse(choiceAsString);
-                switch (choice)
-                {
-                    case AnimalsScreenChoices.Mammals:
-                        _mammalsScreen.Show();
-                        break;
+            SwitchHandler();
 
-                    case AnimalsScreenChoices.Read:
-                        ReadFromFile();
-                        break;
+            return;
 
-                    case AnimalsScreenChoices.Save:
-                        SaveToFile();
-                        break;
-
-                    case AnimalsScreenChoices.Exit:
-                        Console.WriteLine("Going back to parent menu.");
-                        return;
-                }
-            }
-            catch
-            {
-                Console.WriteLine("Invalid choice. Try again.");
-            }
         }
     }
+
+
+    public override void EnterScreen()
+    {
+        try
+        {
+            AnimalsScreenChoices choice = (AnimalsScreenChoices)currentField;
+            switch (choice)
+            {
+                case AnimalsScreenChoices.Mammals:
+                    _mammalsScreen.Show();
+                    break;
+
+                case AnimalsScreenChoices.Read:
+                    ReadFromFile();
+                    break;
+
+                case AnimalsScreenChoices.Save:
+                    SaveToFile();
+                    break;
+
+                case AnimalsScreenChoices.Exit:
+                    Console.WriteLine("Going back to parent menu.");
+                    return;
+            }
+        }
+        catch
+        {
+            Console.WriteLine("Invalid choice. Try again.");
+        }
+    }
+
+
 
     #endregion // Public Methods
 
@@ -126,7 +137,7 @@ public sealed class AnimalsScreen : Screen
             {
                 throw new ArgumentNullException(nameof(fileName));
             }
-            _dataService.Write(fileName);
+            _dataService.Read(fileName);
             Console.WriteLine("Data reading from: '{0}' was successful.", fileName);
         }
         catch

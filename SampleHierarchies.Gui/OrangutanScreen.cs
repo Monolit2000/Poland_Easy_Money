@@ -13,69 +13,92 @@ namespace SampleHierarchies.Gui
     {
 
 
-         private IDataService _dataService;
+        private IDataService _dataService;
 
+        //  private MammalsScreen _mammalsScreen;
 
-        public OrangutanScreen( IDataService dataService )
+        public OrangutanScreen(IDataService dataService) : base(dataService)
         {
-            _dataService = dataService; 
+            // _mammalsScreen = mammalsScreen;
+            _dataService = dataService;
         }
+
+
+        
+
+
+
+
         public override void Show()
         {
             while (true)
             {
-                Console.WriteLine();
-                Console.WriteLine("Your available choices are:");
-                Console.WriteLine("0. Exit");
-                Console.WriteLine("1. List all orungutans");
-                Console.WriteLine("2. Create a new orungutan");
-                Console.WriteLine("3. Delete existing orungutan");
-                Console.WriteLine("4. Modify existing orungutan");
-                Console.Write("Please enter your choice: ");
-
-                string? choiceAsString = Console.ReadLine();
-
-                // Validate choice
-                try
+                var list = new List<ScreenLineEntry>
                 {
-                    if (choiceAsString is null)
-                    {
-                        throw new ArgumentNullException(nameof(choiceAsString));
-                    }
+                    new ScreenLineEntry { Text = "0. Exit" },
+                    new ScreenLineEntry { Text = "1. List all orungutans" },
+                    new ScreenLineEntry { Text = "2. Create a new orungutan" },
+                    new ScreenLineEntry { Text = "2. Delete existing orungutan" },
+                    new ScreenLineEntry { Text = "2. Modify existing orungutan" }
+                };
 
-                    OrungutanScreenChoices choice = (OrungutanScreenChoices)Int32.Parse(choiceAsString);
-                    switch (choice)
-                    {
-                        case OrungutanScreenChoices.List:
-                            ListOrungutans();
-                            break;
+                ScreenRender(list, _dataService.settings.OrungutanScreenColor);
 
-                        case OrungutanScreenChoices.Create:
-                            AddOrungutan(); break;
+                SwitchHandler();
 
-                        case OrungutanScreenChoices.Delete:
-                            DeleteOrungutan();
-                            break;
-
-                        case OrungutanScreenChoices.Modify:
-                            EditOrungutanMain();
-                            break;
-
-                        case OrungutanScreenChoices.Exit:
-                            Console.WriteLine("Going back to parent menu.");
-                            return;
-                    }
-                }
-                catch
-                {
-                    Console.WriteLine("Invalid choice. Try again.");
-                }
+                return;
             }
-        
         }
 
+        public override void EnterScreen()
+        {
+            try
+            {
+                OrungutanScreenChoices choice = (OrungutanScreenChoices)currentField;
+                switch (choice)
+                {
+                    case OrungutanScreenChoices.List:
+                        ListOrungutans();
+                        screenLines.Clear();
+                        Console.ReadLine();
+                        Show();
+                        break;
+
+                    case OrungutanScreenChoices.Create:
+                        AddOrungutan();
+                        screenLines.Clear();
+                        Show();
+                        break;
+
+                    case OrungutanScreenChoices.Delete:
+                        DeleteOrungutan();
+                        screenLines.Clear();
+                        Console.ReadLine();
+                        Show();
+                        break;
+
+                    case OrungutanScreenChoices.Modify:
+                        EditOrungutanMain();
+                        screenLines.Clear();
+                        Console.ReadLine();
+                        Show();
+                        break;
+
+                    case OrungutanScreenChoices.Exit:
+                        Console.WriteLine("Going back to parent menu.");
+                        //_mammalsScreen.Show();
+                        break;
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Invalid choice. Try again.");
+            }
+        }
+
+
         /// <summary>
-        /// List all dogs.
+        /// List all orungutans.
         /// </summary>
         private void ListOrungutans()
         {
@@ -99,7 +122,7 @@ namespace SampleHierarchies.Gui
         }
 
         /// <summary>
-        /// Add a dog.
+        /// Add a orungutan.
         /// </summary>
         private void AddOrungutan()
         {
@@ -116,7 +139,7 @@ namespace SampleHierarchies.Gui
         }
 
         /// <summary>
-        /// Deletes a dog.
+        /// Deletes a orungutan.
         /// </summary>
         private void DeleteOrungutan()
         {
@@ -147,7 +170,7 @@ namespace SampleHierarchies.Gui
         }
 
         /// <summary>
-        /// Edits an existing dog after choice made.
+        /// Edits an existing orungutan after choice made.
         /// </summary>
         private void EditOrungutanMain()
         {
@@ -180,7 +203,7 @@ namespace SampleHierarchies.Gui
         }
 
         /// <summary>
-        /// Adds/edit specific dog.
+        /// Adds/edit specific orungutan.
         /// </summary>
         /// <exception cref="ArgumentNullException"></exception>
         private Orungutan AddEditOrungutan()
@@ -197,7 +220,7 @@ namespace SampleHierarchies.Gui
             string? AnswerForArborealLifstyle = Console.ReadLine().ToLower();
             if (AnswerForArborealLifstyle == "yes" || AnswerForArborealLifstyle == "y")
             {
-                 arborealLifstyle = true;
+                arborealLifstyle = true;
             }
 
 
@@ -231,7 +254,7 @@ namespace SampleHierarchies.Gui
                 slowReproductiveRate = true;
             }
 
-            
+
 
 
 

@@ -17,63 +17,73 @@ public sealed class MammalsScreen : Screen
 
     private OrangutanScreen _orangutanScreen;
 
+    private IDataService _dataService;
     /// <summary>
     /// Ctor.
     /// </summary>
     /// <param name="dataService">Data service reference</param>
     /// <param name="dogsScreen">Dogs screen</param>
-    public MammalsScreen(DogsScreen dogsScreen, OrangutanScreen orangutanScreen)
+    public MammalsScreen(DogsScreen dogsScreen, OrangutanScreen orangutanScreen, IDataService dataService) : base(dataService)
     {
         _dogsScreen = dogsScreen;
         _orangutanScreen = orangutanScreen;
+        _dataService = dataService;
     }
 
     #endregion Properties And Ctor
 
     #region Public Methods
 
+
+
+
+
+
     /// <inheritdoc/>
     public override void Show()
     {
         while (true)
         {
-            Console.WriteLine();
-            Console.WriteLine("Your available choices are:");
-            Console.WriteLine("0. Exit");
-            Console.WriteLine("1. Dogs");
-            Console.WriteLine("2. Orangutan");
-            Console.Write("Please enter your choice: ");
-
-            string? choiceAsString = Console.ReadLine();
-
-            // Validate choice
-            try
+            var list = new List<ScreenLineEntry>
             {
-                if (choiceAsString is null)
-                {
-                    throw new ArgumentNullException(nameof(choiceAsString));
-                }
+                new ScreenLineEntry{ Text = "0. Exit"},
+                new ScreenLineEntry{ Text = "1. Dogs"},
+                new ScreenLineEntry{ Text = "2. Orangutan"},
+            };
 
-                MammalsScreenChoices choice = (MammalsScreenChoices)Int32.Parse(choiceAsString);
-                switch (choice)
-                {
-                    case MammalsScreenChoices.Dogs:
-                        _dogsScreen.Show();
-                        break;
+            ScreenRender(list, _dataService.settings.MammalSpeciesColor);
 
-                    case MammalsScreenChoices.Orangutan:
-                        _orangutanScreen.Show();
-                        break;
+            SwitchHandler();
+            return;
 
-                    case MammalsScreenChoices.Exit:
-                        Console.WriteLine("Going back to parent menu.");
-                        return;
-                }
-            }
-            catch
+
+        }
+    }
+
+
+    public override void EnterScreen()
+    {
+        try
+        {
+            MammalsScreenChoices choice = (MammalsScreenChoices)currentField;
+            switch (choice)
             {
-                Console.WriteLine("Invalid choice. Try again.");
+                case MammalsScreenChoices.Dogs:
+                    _dogsScreen.Show();
+                    break;
+
+                case MammalsScreenChoices.Orangutan:
+                    _orangutanScreen.Show();
+                    break;
+
+                case MammalsScreenChoices.Exit:
+                    Console.WriteLine("Going back to parent menu.");
+                    return;
             }
+        }
+        catch
+        {
+            Console.WriteLine("Invalid choice. Try again.");
         }
     }
 

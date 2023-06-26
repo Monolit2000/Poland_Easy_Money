@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ProgrammingObjectOriented\\src\\SampleHierarchies.Interfaces\\SampleHierarchies.Interfaces.csproj",
+      "projectUniqueName": "E:\\Poland_App\\Poland_Easy_Money\\SampleHierarchies.Interfaces\\SampleHierarchies.Interfaces.csproj",
       "projectName": "SampleHierarchies.Interfaces",
-      "projectPath": "E:\\ProgrammingObjectOriented\\src\\SampleHierarchies.Interfaces\\SampleHierarchies.Interfaces.csproj",
+      "projectPath": "E:\\Poland_App\\Poland_Easy_Money\\SampleHierarchies.Interfaces\\SampleHierarchies.Interfaces.csproj",
       "packagesPath": "C:\\Users\\DIO\\.nuget\\packages\\",
-      "outputPath": "E:\\ProgrammingObjectOriented\\src\\SampleHierarchies.Interfaces\\obj\\",
+      "outputPath": "E:\\Poland_App\\Poland_Easy_Money\\SampleHierarchies.Interfaces\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -58,8 +58,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\ProgrammingObjectOriented\\src\\SampleHierarchies.Enums\\SampleHierarchies.Enums.csproj": {
-              "projectPath": "E:\\ProgrammingObjectOriented\\src\\SampleHierarchies.Enums\\SampleHierarchies.Enums.csproj"
+            "E:\\Poland_App\\Poland_Easy_Money\\SampleHierarchies.Enums\\SampleHierarchies.Enums.csproj": {
+              "projectPath": "E:\\Poland_App\\Poland_Easy_Money\\SampleHierarchies.Enums\\SampleHierarchies.Enums.csproj"
             }
           }
         }
@@ -88,7 +88,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.311\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.313\\RuntimeIdentifierGraph.json"
       }
     }
   }

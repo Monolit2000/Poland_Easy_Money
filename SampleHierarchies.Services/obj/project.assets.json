@@ -126,11 +126,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ProgrammingObjectOriented\\src\\SampleHierarchies.Services\\SampleHierarchies.Services.csproj",
+      "projectUniqueName": "E:\\Poland_App\\Poland_Easy_Money\\SampleHierarchies.Services\\SampleHierarchies.Services.csproj",
       "projectName": "SampleHierarchies.Services",
-      "projectPath": "E:\\ProgrammingObjectOriented\\src\\SampleHierarchies.Services\\SampleHierarchies.Services.csproj",
+      "projectPath": "E:\\Poland_App\\Poland_Easy_Money\\SampleHierarchies.Services\\SampleHierarchies.Services.csproj",
       "packagesPath": "C:\\Users\\DIO\\.nuget\\packages\\",
-      "outputPath": "E:\\ProgrammingObjectOriented\\src\\SampleHierarchies.Services\\obj\\",
+      "outputPath": "E:\\Poland_App\\Poland_Easy_Money\\SampleHierarchies.Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -151,14 +151,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\ProgrammingObjectOriented\\src\\SampleHierarchies.Data\\SampleHierarchies.Data.csproj": {
-              "projectPath": "E:\\ProgrammingObjectOriented\\src\\SampleHierarchies.Data\\SampleHierarchies.Data.csproj"
+            "E:\\Poland_App\\Poland_Easy_Money\\SampleHierarchies.Data\\SampleHierarchies.Data.csproj": {
+              "projectPath": "E:\\Poland_App\\Poland_Easy_Money\\SampleHierarchies.Data\\SampleHierarchies.Data.csproj"
             },
-            "E:\\ProgrammingObjectOriented\\src\\SampleHierarchies.Helpers\\SampleHierarchies.Helpers.csproj": {
-              "projectPath": "E:\\ProgrammingObjectOriented\\src\\SampleHierarchies.Helpers\\SampleHierarchies.Helpers.csproj"
+            "E:\\Poland_App\\Poland_Easy_Money\\SampleHierarchies.Helpers\\SampleHierarchies.Helpers.csproj": {
+              "projectPath": "E:\\Poland_App\\Poland_Easy_Money\\SampleHierarchies.Helpers\\SampleHierarchies.Helpers.csproj"
             },
-            "E:\\ProgrammingObjectOriented\\src\\SampleHierarchies.Interfaces\\SampleHierarchies.Interfaces.csproj": {
-              "projectPath": "E:\\ProgrammingObjectOriented\\src\\SampleHierarchies.Interfaces\\SampleHierarchies.Interfaces.csproj"
+            "E:\\Poland_App\\Poland_Easy_Money\\SampleHierarchies.Interfaces\\SampleHierarchies.Interfaces.csproj": {
+              "projectPath": "E:\\Poland_App\\Poland_Easy_Money\\SampleHierarchies.Interfaces\\SampleHierarchies.Interfaces.csproj"
             }
           }
         }
@@ -193,7 +193,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.311\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.313\\RuntimeIdentifierGraph.json"
       }
     }
   }

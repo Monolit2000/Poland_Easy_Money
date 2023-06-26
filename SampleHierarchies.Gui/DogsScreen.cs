@@ -20,7 +20,7 @@ public sealed class DogsScreen : Screen
     /// Ctor.
     /// </summary>
     /// <param name="dataService">Data service reference</param>
-    public DogsScreen(IDataService dataService)
+    public DogsScreen(IDataService dataService) : base(dataService) 
     {
         _dataService = dataService;
     }
@@ -29,57 +29,69 @@ public sealed class DogsScreen : Screen
 
     #region Public Methods
 
+    public override void EnterScreen()
+    {
+        try
+        {
+
+            DogsScreenChoices choice = (DogsScreenChoices)currentField;
+            switch (choice)
+            {
+                case DogsScreenChoices.List:
+                    ListDogs();
+                    screenLines.Clear();
+                    Show();
+                    break;
+
+                case DogsScreenChoices.Create:
+                    AddDog();
+                    screenLines.Clear();
+                    Show();
+                    break;
+
+                case DogsScreenChoices.Delete:
+                    DeleteDog();
+                    screenLines.Clear();
+                    Show();
+                    break;
+
+                case DogsScreenChoices.Modify:
+                    EditDogMain();
+                    screenLines.Clear();
+                    Show();
+                    break;
+
+                case DogsScreenChoices.Exit:
+                    Console.WriteLine("Going back to parent menu.");
+                    return;
+            }
+        }
+        catch
+        {
+            Console.WriteLine("Invalid choice. Try again.");
+        }
+    }
+
     /// <inheritdoc/>
     public override void Show()
     {
         while (true)
         {
-            Console.WriteLine();
-            Console.WriteLine("Your available choices are:");
-            Console.WriteLine("0. Exit");
-            Console.WriteLine("1. List all dogs");
-            Console.WriteLine("2. Create a new dog");
-            Console.WriteLine("3. Delete existing dog");
-            Console.WriteLine("4. Modify existing dog");
-            Console.Write("Please enter your choice: ");
-
-            string? choiceAsString = Console.ReadLine();
-
-            // Validate choice
-            try
+    
+            var list = new List<ScreenLineEntry>
             {
-                if (choiceAsString is null)
-                {
-                    throw new ArgumentNullException(nameof(choiceAsString)); 
-                }
+                new ScreenLineEntry { Text = "0. Exit" },
+                new ScreenLineEntry { Text = "1. List all dogs" },
+                new ScreenLineEntry { Text = "2. Create a new dog" },
+                new ScreenLineEntry { Text = "2. Delete existing dog" },
+                new ScreenLineEntry { Text = "2. Modify existing dog" }
+            };
 
-                DogsScreenChoices choice = (DogsScreenChoices)Int32.Parse(choiceAsString);
-                switch (choice)
-                {
-                    case DogsScreenChoices.List:
-                        ListDogs();
-                        break;
+            ScreenRender(list, _dataService.settings.DogsScreenColor);
 
-                    case DogsScreenChoices.Create:
-                        AddDog(); break;
+            SwitchHandler();
 
-                    case DogsScreenChoices.Delete: 
-                        DeleteDog();
-                        break;
-
-                    case DogsScreenChoices.Modify:
-                        EditDogMain();
-                        break;
-
-                    case DogsScreenChoices.Exit:
-                        Console.WriteLine("Going back to parent menu.");
-                        return;
-                }
-            }
-            catch
-            {
-                Console.WriteLine("Invalid choice. Try again.");
-            }
+            return;
         }
     }
 
@@ -104,10 +116,12 @@ public sealed class DogsScreen : Screen
                 dog.Display();
                 i++;
             }
+            Console.ReadLine();
         }
         else
         {
             Console.WriteLine("The list of dogs is empty.");
+            Console.ReadLine();
         }
     }
 

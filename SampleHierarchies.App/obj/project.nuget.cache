@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hyzUajYxJ4Siw2NB3K5EhcFkYZ+BnV0seMY2rMXMnVck90qAdRiM6MmcRHdw4ckZTQ1ytQufygHOYo/wzr8tvA==",
+  "dgSpecHash": "g4UdilVakbsJZB6zHB+VOPzTzLjDLLiM92uVYlyHhdFBF1YIqDJ5GeVAZZ3HGbVoDamViIDDoQASLGbMXerDZg==",
   "success": true,
-  "projectFilePath": "E:\\ProgrammingObjectOriented\\src\\SampleHierarchies.App\\SampleHierarchies.App.csproj",
+  "projectFilePath": "E:\\Poland_App\\Poland_Easy_Money\\SampleHierarchies.App\\SampleHierarchies.App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DIO\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0-preview.2.23128.3\\microsoft.extensions.configuration.8.0.0-preview.2.23128.3.nupkg.sha512",
     "C:\\Users\\DIO\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0-preview.2.23128.3\\microsoft.extensions.configuration.abstractions.8.0.0-preview.2.23128.3.nupkg.sha512",
